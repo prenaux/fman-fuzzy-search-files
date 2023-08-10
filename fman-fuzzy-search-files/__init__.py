@@ -5,6 +5,10 @@ from os.path import join, isdir, dirname
 import fnmatch
 import re
 
+def replace_spaces(s):
+  # Replace spaces that aren't preceded by a backslash with .*
+  return re.sub(r'(?<!\\) ', '.*', s)
+
 def prepare_query(query):
   try:
     if query.startswith(":"):
@@ -12,7 +16,8 @@ def prepare_query(query):
       regex = fnmatch.translate(query[1:])
     else:
       # regex
-      regex = query
+      # regex = query
+      regex = replace_spaces(query)
     return re.compile(regex, re.IGNORECASE)
   except:
     return None
