@@ -1,5 +1,4 @@
 [
-    { "keys": [ "Cmd+F" ], "command": "search_files_in_this_folder" },
-    { "keys": [ "Cmd+E" ], "command": "search_files_in_this_folder" },
-    { "keys": [ "Cmd+Shift+F" ], "command": "search_files_in_sub_folders" }
+    { "keys": [ "Cmd+F" ], "command": "fuzzy_search_files_in_sub_folders" },
+    { "keys": [ "Ctrl+F" ], "command": "fuzzy_search_files_in_sub_folders" }
 ]
